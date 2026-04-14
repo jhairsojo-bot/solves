@@ -1,0 +1,60 @@
+export function mensaje(numero) {
+    const frasesMotivacionales = [
+        "Cada segundo cuenta, pero cada práctica vale más.",
+        "No busques suerte, entrena hasta no necesitarla.",
+        "El cubo no es el problema, eres tú mejorando.",
+        "Cada solve te acerca a tu mejor tiempo.",
+        "La consistencia vence al lucky solve.",
+        "No es magia, es práctica.",
+        "Un segundo menos es una victoria.",
+        "Practica lento para ser rápido.",
+        "El TPS llega con paciencia.",
+        "El cubo revela tu disciplina.",
+        "No compitas con otros, compite con tu PB.",
+        "Cada error es una oportunidad de mejorar.",
+        "Aprende los algoritmos, domina la ejecución.",
+        "La velocidad viene del control.",
+        "No te frustres, ajusta tu técnica.",
+
+        "El reconocimiento es más importante que la velocidad.",
+        "Menos pausas, más fluidez.",
+        "La memoria muscular se construye, no nace.",
+        "El éxito está en los detalles.",
+        "Un buen lookahead vale más que girar rápido.",
+        "Relájate, la tensión te hace más lento.",
+        "La práctica constante crea campeones.",
+        "No es solo resolver, es optimizar.",
+        "Cada scramble es una nueva oportunidad.",
+        "Confía en tus algoritmos.",
+        "La precisión supera la velocidad sin control.",
+        "Un mal día no define tu nivel.",
+        "La mejora es invisible hasta que aparece.",
+        "Entrena inteligente, no solo duro.",
+        "La velocidad real viene de la eficiencia.",
+
+        "Menos movimientos, mejores tiempos.",
+        "El cubo siempre te enseña algo.",
+        "Romper tu PB empieza en tu mente.",
+        "No te obsesiones con el tiempo, mejora el proceso.",
+        "Cada sesión cuenta.",
+        "Los campeones también fueron lentos alguna vez.",
+        "Haz que cada solve tenga propósito.",
+        "La práctica perfecta hace al experto.",
+        "Domina lo básico, luego acelera.",
+        "El progreso real toma tiempo.",
+        "No abandones justo antes de mejorar.",
+        "Cada milisegundo importa.",
+        "La calma mejora tus solves.",
+        "La velocidad sin control es caos.",
+        "Un cuber disciplinado siempre mejora.",
+        "La clave está en la repetición.",
+        "Hazlo una vez bien, luego hazlo rápido.",
+        "Tu mente resuelve antes que tus manos.",
+        "La paciencia también es velocidad.",
+        "Sigue girando, sigue mejorando."
+    ];
+
+    let i = parseInt(numero - 1);
+    let frase = frasesMotivacionales[i];
+    return frase;
+}

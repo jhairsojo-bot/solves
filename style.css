@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    color: #f8fafc;
+    min-height: 100vh;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.div2 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    
+    /* Evita que se estire al 100% de la cuadrícula, dándole tamaño de login */
+    place-self: center;
+    width: 100%;
+    max-width: 400px;
+    
+    /* Centrado de los elementos y de arriba a abajo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+    /* Estilo oscuro llamativo (Glassmorphism) */
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+.div2 h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #a78bfa, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* El input y el botón tendrán el mismo tamaño */
+.div2 input, 
+.div2 button {
+    width: 100%;
+    max-width: 280px;
+    height: 50px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.div2 input {
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.div2 input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.div2 input:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 15px rgba(167, 139, 250, 0.3);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.div2 button {
+    background: linear-gradient(135deg, #8b5cf6, #db2777);
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(219, 39, 119, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.div2 button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(219, 39, 119, 0.5);
+}
+
+.div2 button:active {
+    transform: translateY(1px);
+}
+
+/* --- CAJA DE MENSAJE (Réplica) --- */
+.div-mensaje {
+    grid-column: span 3 / span 3;
+    grid-row: span 1 / span 1;
+    grid-column-start: 2;
+    grid-row-start: 5; /* Se coloca justo debajo del div2 */
+    
+    place-self: center;
+    width: 100%;
+    max-width: 400px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.div-mensaje h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #f472b6;
+}
+
+/* --- RESPONSIVIDAD (Tablets y Móviles) --- */
+@media (max-width: 768px) {
+    .parent {
+        display: flex;
+        flex-direction: column; /* Apila las cajas verticalmente */
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        gap: 20px; /* Espacio entre los bloques */
+    }
+
+    .div2, .div-mensaje {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .div2 input, 
+    .div2 button {
+        max-width: 100%;
+    }
+}
